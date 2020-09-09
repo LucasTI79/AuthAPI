@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb:localhost/noderest', { useMongoClient: true });
+mongoose.connect('mongodb://localhost/noderest',{ 
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useCreateIndex:true,
+    useFindAndModify:false
+});
 
 mongoose.Promise = global.Promise;
 

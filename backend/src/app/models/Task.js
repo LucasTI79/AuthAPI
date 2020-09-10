@@ -1,5 +1,4 @@
 const mongoose = require('../../database');
-const bcrypt = require('bcryptjs');
 
 const TaskSchema = new mongoose.Schema({
     title: {
@@ -14,7 +13,7 @@ const TaskSchema = new mongoose.Schema({
     assignedTo:{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
-        required: true
+        require: true,
     },
     tasks:{
         type: mongoose.Schema.Types.ObjectId,
